@@ -65,7 +65,7 @@ async def main():
         if args.path and username:
             try:
                 message = await client.send_file(entity=target_chat, file=open(args.path, 'rb'), caption=args.caption, progress_callback=upload_callback, parse_mode=parse_mode)
-                print("File id: {}".format(message.file.id))
+                print("File id: {}".format(message.message_id))
             except:
                 print("Something went wrong, make sure the directory path is valid.")
 
